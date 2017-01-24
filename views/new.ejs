@@ -1,8 +1,8 @@
 <%include partials/header %>
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <h1>Add New Campground</h1>
+    <div class="col-sm-4 col-sm-offset-4">
+      <h1 class="text-center">Add New Campground</h1>
       <form action="/campgrounds" method="POST">
           <div class="form-group">
             <input type="text" name="name" placeholder="Campground Name" class="form-control">
@@ -13,10 +13,8 @@
           <div class="actions">
             <button type="submit" class="btn btn-success btn-block">Submit</button>
           </div>
-        </div>
       </form>
+        <a style="text-align:center" href="/campgrounds"><span class="text-center glyphicon glyphicon-chevron-left"></span>Go Back</a>
     </div>
   </div>
-</div>
-
 <%include partials/footer %>
