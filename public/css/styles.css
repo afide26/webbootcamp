@@ -31,6 +31,47 @@ a.navbar-brand img{
 .navbar .nav > li > a {
   line-height: 35px;
 }
+
+#yelp_camp_jumbotron{
+  border-radius: none;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  margin: -22px -20px 40px -20px;
+  background: url('https://farm4.staticflickr.com/3062/2984119099_82336dfc3b.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 450px;
+}
+
+#yelp_camp_jumbotron h1.text-center{
+  color: #ff8040;
+  text-shadow: rgba(25, 28, 55, 0.9) 4px 5px 2px;
+}
+
+#yelp_camp_jumbotron p.text-center.welcome{
+  color: #ff8040;
+  font-weight: bold;
+  text-shadow: rgba(25, 28, 55, 0.9) 3px 3px 2px;
+  letter-spacing: 0.2rem;
+}
+
+#intro{
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fefefe;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  text-align:center;
+  padding: 3px;
+  background: #ff8040;
+  margin: 20px auto;
+}
+#campgrounds{
+  width: 95%;
+  margin: 0 auto;
+}
+.btn-warning{
+  background-color:#ff8040;
+}
 img.show.thumbnail{
   margin:0 auto;
 }
@@ -38,6 +79,7 @@ img.show.thumbnail{
 div.thumbnail.all img{
   display:block;
   height: 200px;
+  width: 100%;
   overflow:hidden;
 }
 footer{
