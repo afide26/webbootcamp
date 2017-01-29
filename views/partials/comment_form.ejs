@@ -1,0 +1,12 @@
+<form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+    <div class="form-group">
+      <input type="text" name="comment[text]" placeholder="Your comments" class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="text" name="comment[author]" placeholder="Your name" class="form-control">
+    </div>
+    <div class="actions">
+      <button type="submit" class="btn btn-success btn-block">Submit</button>
+    </div>
+</form>
+<a style="text-align:center" href="/campgrounds"><span class="text-center glyphicon glyphicon-chevron-left"></span>Go Back</a>
