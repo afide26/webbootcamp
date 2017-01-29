@@ -6,11 +6,17 @@ body{
   margin: 0 0 60px;
 }
 
-#yelp_camp_nav a{
+#yelp_camp_nav a,
+#user>p{
   color: #fff;
   text-transform: uppercase;
   letter-spacing: .2rem;
   border-radius: none;
+}
+
+#user>p{
+  margin: 22px auto;
+  text-transform: none;
 }
 .navbar-default{
   background-color: #ff8040;
@@ -27,6 +33,12 @@ a.navbar-brand img{
 }
 img.show.thumbnail{
   margin:0 auto;
+}
+
+div.thumbnail.all img{
+  display:block;
+  height: 200px;
+  overflow:hidden;
 }
 footer{
   position: absolute;

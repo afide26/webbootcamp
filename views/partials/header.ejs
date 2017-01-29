@@ -17,9 +17,14 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/"><i class="fa fa-sign-in"></i> Login</a></li>
-        <li><a href="/"><i class="fa fa-user-plus"></i> Sign Up</a></li>
-        <li><a href="/"><i class="fa fa-sign-out"></i> Log Out</a></li>
+        <% if(!currentUser){%>
+          <li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
+          <li><a href="/register"><i class="fa fa-user-plus"></i> Sign Up</a></li>
+        <% } else{ %>
+          <% var re = new RegExp(/.*@/) %>
+          <li id="user"><p>Signed in as <%= currentUser.username %></p></li>
+          <li><a href="/logout"><i class="fa fa-sign-out"></i> Log Out</a></li>
+        <% } %>
       </ul>
     </div>
   </div>
