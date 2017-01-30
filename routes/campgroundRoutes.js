@@ -2,7 +2,8 @@ var express = require('express');
 var router  = express.Router();
 var Campground = require('./../models/campground');
 
-router.get('', (req,res)=>{
+
+router.get('/', (req,res)=>{
   Campground.find({}, (err,allCampgrounds)=>{
     if(err){
       console.log("Error", err);
@@ -10,11 +11,6 @@ router.get('', (req,res)=>{
       res.render("campgrounds/index", {campgrounds:allCampgrounds});
     }
   })
-})
-
-// NEW ROUTE
-router.get('/new', (req,res)=>{
-  res.render('campgrounds/new');
 });
 
 // CREATE ROUTE
@@ -31,6 +27,13 @@ router.post('/', (req,res)=>{
     }
   });
 });
+
+// NEW ROUTE
+router.get('/new', (req,res)=>{
+  res.render('campgrounds/new');
+});
+
+
 
 router.get('/:id/edit', (req,res)=>{
 

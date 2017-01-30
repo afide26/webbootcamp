@@ -1,6 +1,8 @@
 var express  = require('express');
 var router   = express.Router();
+var isLoggedIn = require('../middleware/isLoggedIn');
 var passport = require('passport');
+var User     = require('../models/user');
 
 // INDEX ROUTE
 router.get('/', function(req, res){
@@ -10,8 +12,6 @@ router.get('/', function(req, res){
 // AUTH ROUTES
 // ===================
 router.get('/register', function(req,res){
-  req.body.username = " ";
-  req.body.password = " ";
   res.render('register');
 });
 
