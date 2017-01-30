@@ -1,9 +1,14 @@
 var express    = require('express');
-var router     = express.Router();
-var Campground = require('../models/campground');
-var Comment    = require('../models/comment');
+var router     = express.Router({mergeParams: true});
+var isLoggedIn = require('../middleware/isLoggedIn');
+var Campground = require('./../models/campground');
+var Comment = require('./../models/comment');
 
-app.get('/campgrounds/:id/comments/new', isLoggedIn, (req,res)=>{
+
+// =================
+// COMMENTS ROUTES
+// =================
+router.get('/new', isLoggedIn, (req,res)=>{
   Campground.findById(req.params.id,(err, campground)=>{
     if(err){
       console.log(err);
@@ -13,7 +18,7 @@ app.get('/campgrounds/:id/comments/new', isLoggedIn, (req,res)=>{
   });
 });
 
-app.post('/campgrounds/:id/comments', isLoggedIn, (req,res)=>{
+router.post('/', isLoggedIn, (req,res)=>{
   Campground.findById(req.params.id, (err, campground)=>{
     if(err){
       console.log(err);
@@ -30,4 +35,6 @@ app.post('/campgrounds/:id/comments', isLoggedIn, (req,res)=>{
       })
     }
   });
-});
+})
+
+module.exports = router;

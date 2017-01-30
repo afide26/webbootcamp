@@ -10,10 +10,11 @@ var express    = require('express');
     User       = require('./models/user'),
     seedDB     = require('./seeds');
 
-// ROUTES
-var campgroundRoutes = require('./routes/campgrounds.js');
-var commentRoutes    = require('./routes/comments.js');
-var indexRoutes      = require('./routes/index.js');
+// Route Requires
+var campgroundRoutes = require('./routes/campgroundRoutes');
+var commentRoutes = require('./routes/commentRoutes');
+var indexRoutes = require('./routes/indexRoutes');
+
 
 mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(bodyParser.urlencoded({extended:true}));
@@ -39,7 +40,6 @@ app.use(function(req,res,next){
   res.locals.currentUser = req.user;
   next();
 });
-
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 app.use('/', indexRoutes);
