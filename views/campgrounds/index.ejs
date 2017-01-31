@@ -14,12 +14,12 @@
   <h1 id="intro" class="text-center">Featured Campgrounds</h1>
   <div id="campgrounds" class="row text-center" style="display: flex; flex-wrap:wrap">
     <% campgrounds.forEach(function(campground){%>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="thumbnail all">
           <img src="<%= campground.image %>" alt="<%= campground.name%>"/>
           <div class="caption">
             <h4><%= campground.name %></h4>
-            <p><%- campground.description.substring(0,100) %></p>
+            <p><%= campground.description.substring(0,100) %></p>
             <p>
               <a class="btn btn-large center-block btn-warning" href="/campgrounds/<%= campground._id %>">More Info</a>
             </p>

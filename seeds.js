@@ -31,34 +31,29 @@ function seedDB(){
     if(err){
       return console.log(err);
     }
-
-    data.forEach((seed)=>{
-      Campground.create(seed, (err,campground)=>{
-        if(err){
-          console.log(err);
-        }else{
-          console.log('Added a campground');
-          Comment.create(
-            {
-              text:"Great spot, better with internet",
-              author: 'Homer'
-            },(err,comment)=>{
-              if(err){
-                console.log(err);
-              }else{
-                campground.comments.push(comment);
-                campground.save();
-                console.log('Created new comment');
-              }
-            });
-        }
-      })
-    });
-  });
-
-
-
-
+  // data.forEach((seed)=>{
+  //   Campground.create(seed, (err,campground)=>{
+  //     if(err){
+  //       console.log(err);
+  //     }else{
+  //       console.log('Added a campground');
+  //       Comment.create(
+  //         {
+  //           text:"Great spot, better with internet",
+  //           author: 'Homer'
+  //         },(err,comment)=>{
+  //           if(err){
+  //             console.log(err);
+  //           }else{
+  //             campground.comments.push(comment);
+  //             campground.save();
+  //             console.log('Created new comment');
+  //           }
+  //         });
+  //     }
+  //   })
+  // }); 
+});
 }
 
 module.exports = seedDB;

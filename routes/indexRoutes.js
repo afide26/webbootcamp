@@ -6,7 +6,7 @@ var User     = require('../models/user');
 
 // INDEX ROUTE
 router.get('/', function(req, res){
-  res.render('campgrounds/landing');
+  res.render('landing');
 });
 // ===================
 // AUTH ROUTES

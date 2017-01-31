@@ -36,7 +36,7 @@ a.navbar-brand img{
   border-radius: none;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   margin: -22px -20px 40px -20px;
-  background: url('https://farm4.staticflickr.com/3062/2984119099_82336dfc3b.jpg');
+  background: url('http://1.bp.blogspot.com/_syt5uOK-SGc/S6tG-UIaaZI/AAAAAAAAABQ/V_E0pJl7eNM/s1600/DSCF0287.JPG');
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 450px;
@@ -44,13 +44,13 @@ a.navbar-brand img{
 
 #yelp_camp_jumbotron h1.text-center{
   color: #ff8040;
-  text-shadow: rgba(25, 28, 55, 0.9) 4px 5px 2px;
+  text-shadow: rgba(100, 120, 155, 0.7) 4px 2px 2px;
 }
 
 #yelp_camp_jumbotron p.text-center.welcome{
   color: #ff8040;
   font-weight: bold;
-  text-shadow: rgba(25, 28, 55, 0.9) 3px 3px 2px;
+  text-shadow: rgba(100, 120, 155, 0.7) 2px 2px 2px;
   letter-spacing: 0.2rem;
 }
 
@@ -71,6 +71,9 @@ a.navbar-brand img{
 }
 .btn-warning{
   background-color:#ff8040;
+}
+.btn-success{
+  background-color: #00b2d6;
 }
 img.show.thumbnail{
   margin:0 auto;
@@ -140,4 +143,28 @@ div.caption-full{
 
 #date{
   text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+  #intro{
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #fefefe;
+    font-weight: normal;
+    letter-spacing: 0.5rem;
+    text-align:center;
+    padding: 1px;
+    background: #ff8040;
+    margin: 20px auto;
+    font-size: 2rem;
+  }
+  footer{
+    position: absolute;
+    font-size: 1rem;
+    left:0;
+    bottom: 0;
+    height: 60px;
+    width:100%;
+    background-color: #fc742f;
+  }
 }
