@@ -79,6 +79,10 @@ img.show.thumbnail{
   margin:0 auto;
 }
 
+#delete-form{
+  display:inline;
+}
+
 div.thumbnail.all img{
   display:block;
   height: 200px;
