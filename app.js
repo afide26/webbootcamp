@@ -37,7 +37,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// USER MIDDLEWARE
+// USER MIDDLEWARE to set currentUser for all templates
 app.use(function(req,res,next){
   res.locals.currentUser = req.user;
   next();
