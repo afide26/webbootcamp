@@ -4,7 +4,7 @@ function checkCampgroundOwner(req, res, next){
       if(err){
         res.redirect('back');
       }else{
-        if(campground.author.id.equals(req.user.id)){
+        if(campground.author.id.equals(req.user._id)){
           next()
         }else{
           res.redirect('back');
