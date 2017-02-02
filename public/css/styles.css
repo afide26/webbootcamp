@@ -32,6 +32,20 @@ a.navbar-brand img{
   line-height: 35px;
 }
 
+.navbar-default .navbar-toggle {
+    border: 0;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+     background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  display: block;
+  width: 30px;
+  height: 5px;
+  border-radius: 1px;
+  background-color: #fff;
+}
 #yelp_camp_jumbotron{
   border-radius: none;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
@@ -137,7 +151,11 @@ div.caption-full{
 .add_campground .text-center{
   height: 20px;
 }
-
+div.alert{
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 45px;
+}
 #add_comment>small>a{
   line-height:30px;
   vertical-align: top;
