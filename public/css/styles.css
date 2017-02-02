@@ -114,9 +114,7 @@ footer p {
   box-shadow: 2px 3px 2px #888888;
   -webkit-box-shadow: 2px 3px 2px #888888;
   -moz-box-shadow: 2px 3px 2px #888888;
-}
-div.thumbnail{
-  padding: 0;
+  padding: 0
 }
 .thumbnail.show>p{
   width: 92%;
@@ -172,5 +170,45 @@ div.caption-full{
     height: 60px;
     width:100%;
     background-color: #fc742f;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 599px){
+  div.thumbnail{
+    max-width: 85%;
+    margin: 10px auto;
+  }
+  div.thumbnail h4{
+    font-size: 1.5rem;
+  }
+  div.thumbnail p{
+    font-size: 1.2rem;
+    padding: 2px;
+  }
+  a.btn-warning{
+    width: 75%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px){
+  div.thumbnail{
+    max-width: 45%;
+    margin: 10px auto;
+  }
+  div.thumbnail h4{
+    font-size: 1.5rem;
+  }
+  div.thumbnail p{
+    font-size: 1.2rem;
+    padding: 2px;
+  }
+  a.btn-warning{
+    width: 75%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0 auto;
   }
 }

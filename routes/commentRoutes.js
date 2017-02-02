@@ -1,9 +1,8 @@
 var express    = require('express');
 var router     = express.Router({mergeParams: true});
-var isLoggedIn = require('../middleware/isLoggedIn');
 var Campground = require('./../models/campground');
 var Comment = require('./../models/comment');
-var checkCommentOwner = require('../middleware/checkCommentOwner');
+var {isLoggedIn, checkCommentOwner} = require('../middleware/index');
 
 
 

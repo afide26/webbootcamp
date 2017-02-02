@@ -1,8 +1,6 @@
 var express = require('express');
 var router  = express.Router();
-var isLoggedIn = require('../middleware/isLoggedIn');
-var checkCampgroundOwner = require('../middleware/checkCampgroundOwner');
-var Campground = require('./../models/campground');
+var {isLoggedIn, checkCampgroundOwner} = require('../middleware/index');
 
 
 router.get('/', (req,res)=>{

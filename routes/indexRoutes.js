@@ -1,9 +1,8 @@
 var express  = require('express');
 var router   = express.Router();
-var isLoggedIn = require('../middleware/isLoggedIn');
 var passport = require('passport');
 var User     = require('../models/user');
-
+var {isLoggedIn} = require('../middleware/index');
 // INDEX ROUTE
 router.get('/', function(req, res){
   res.render('landing');
