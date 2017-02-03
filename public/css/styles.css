@@ -168,6 +168,10 @@ div.alert{
 }
 
 @media screen and (max-width: 767px) {
+  div#navbar[aria-expanded="true"],
+  div#navbar[aria-expanded="false"] {
+    border-top: 0.0625rem dashed #ff8040;
+  }
   #intro{
     font-family: 'Lato', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -211,7 +215,8 @@ div.alert{
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 767px){
+@media screen and (min-width: 600px) and (max-width: 766px){
+
   div.thumbnail{
     max-width: 45%;
     margin: 10px auto;

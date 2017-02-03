@@ -6,8 +6,9 @@ var middlewareObj = {
           res.redirect('back');
         }else{
           if(campground.author.id.equals(req.user._id)){
-            next()
+            next();
           }else{
+            req.flash("error", `You have to be the owner of ${campground.name} to be able to edit it.`)
             res.redirect('back');
           }
         }
@@ -26,6 +27,7 @@ var middlewareObj = {
           if(comment.author.id.equals(req.user._id)){
             next()
           }else{
+            req.flash("error", `You are not the author of the comment`);
             res.redirect('back');
           }
         }
@@ -38,7 +40,7 @@ var middlewareObj = {
     if(req.isAuthenticated()){
       return next();
     }
-    req.flash('error', "You have to be logged in");
+    req.flash('error', "You need to be logged in to do that!");
     res.redirect('/login');
   }
 };
