@@ -15,7 +15,7 @@
       <div class="thumbnail show">
         <img class="img img-responsive" src="<%= campground.image %>" alt="<%=campground.name%>">
         <div class="caption-full">
-          <% if(campground.price){ %>
+          <% if(campground.price && parseInt(campground.price) > 0){ %>
           <h4 class="pull-right">$<%= campground.price %>/night</h4>
           <% } %>
           <h4><a><%= campground.name %></a></h4>
