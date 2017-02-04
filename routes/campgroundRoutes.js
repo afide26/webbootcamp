@@ -27,8 +27,8 @@ router.post('/', isLoggedIn, (req,res)=>{
     if(err){
       console.log(err);
     }else{
-      req.flash('success', `${campground.name} has been added to our list`);
-      res.redirect('/campgrounds');
+      req.flash('success', `${campground.name} has been created.`);
+      res.redirect('/campgrounds/'+campground._id);
     }
   });
 });
