@@ -15,7 +15,9 @@
       <div class="thumbnail show">
         <img class="img img-responsive" src="<%= campground.image %>" alt="<%=campground.name%>">
         <div class="caption-full">
-          <h4 class="pull-right">$9.00 night</h4>
+          <% if(campground.price){ %>
+          <h4 class="pull-right">$<%= campground.price %>/night</h4>
+          <% } %>
           <h4><a><%= campground.name %></a></h4>
           <p><small>Submitted by - <em><%= campground.author.username %></em></small></p>
           <p><%= campground.description %></p>

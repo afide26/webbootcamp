@@ -1,17 +1,6 @@
 body {
   background-color: #666;
 }
-#yelp_camp_jumbotron h1.text-center{
-  color: #ff8040;
-  text-shadow: rgba(100, 120, 155, 0.7) 4px 2px 2px;
-}
-
-#yelp_camp_jumbotron p.text-center.welcome{
-  color: #ff8040;
-  font-weight: bold;
-  text-shadow: rgba(100, 120, 155, 0.7) 2px 2px 2px;
-  letter-spacing: 0.2rem;
-}
 
 #landing-header {
   z-index: 1;
@@ -90,4 +79,10 @@ body {
 /* Older browser support - .no-cssanimations class added by modernizr */
 .no-cssanimations .slideshow li {
     opacity: 1;
+}
+
+/*Fix for alert messages*/
+div.alert.alert-dismissable.fade.in{
+  position: relative !important;
+  z-index: 2 !important;
 }
