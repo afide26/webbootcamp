@@ -1,5 +1,6 @@
 var express    = require('express');
     app        = express(),
+    favicon    = require('serve-favicon'),
     bodyParser = require('body-parser'),
     port       = process.env.PORT || 3000,
     mongoose   = require('mongoose'),
@@ -22,6 +23,7 @@ mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 app.use(methodOverride('_method'));
 app.use(flash());
 // seedDB(); //Seed the database
