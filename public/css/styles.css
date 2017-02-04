@@ -118,7 +118,7 @@ footer{
   bottom: 0;
   height: 60px;
   width:100%;
-  background-color: rgba(255, 128, 64, 0.95);
+  background-color:#ff8040;
 }
 footer p {
   margin-top: 25px;
@@ -184,12 +184,12 @@ div.alert{
     text-transform: uppercase;
     color: #fefefe;
     font-weight: normal;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.1rem;
     text-align:center;
     padding: 1px;
-    background: #449d44;
+    background: #ff8040;
     margin: 20px auto;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   footer{
     position: absolute;
@@ -198,7 +198,7 @@ div.alert{
     bottom: 0;
     height: 60px;
     width:100%;
-    background-color:rgba(255, 128, 64, 0.6);
+    background-color:#ff8040;
   }
 }
 
@@ -223,7 +223,6 @@ div.alert{
 }
 
 @media screen and (min-width: 600px) and (max-width: 766px){
-
   div.thumbnail{
     max-width: 45%;
     margin: 10px auto;
