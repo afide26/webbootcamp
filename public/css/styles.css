@@ -24,10 +24,13 @@ body{
   border:transparent;
 }
 
-a.navbar-brand img{
-  width: 35px;
-  box-sizing:border-box;
-  margin-right: 10px;
+a.navbar-brand{
+  box-sizing: border-box;
+  margin: 10px 5px 5px 5px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  padding: 10px 5px 5px 15px;
 }
 .navbar .nav > li > a {
   line-height: 35px;
