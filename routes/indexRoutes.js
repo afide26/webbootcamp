@@ -36,10 +36,11 @@ router.get('/login', function(req, res){
   res.render('login');
 });
 router.post('/login', passport.authenticate("local", {
-  successRedirect:"/campgrounds",
+  // successRedirect:"/campgrounds",
   failureRedirect:'/login'
 }),function(req, res){
-
+  req.flash("success", "Welcome back to Yelp Camp");
+  res.redirect('/campgrounds');
 });
 
 // ===================

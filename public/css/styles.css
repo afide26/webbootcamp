@@ -52,10 +52,10 @@ a.navbar-brand{
 }
 #yelp_camp_jumbotron{
   position: relative !important;
-  z-index: 1 !important;
+  z-index: 0 !important;
   border-radius: none;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  margin: -22px -20px 40px -20px;
+  margin: -20px -20px 40px -20px;
   background: url('http://1.bp.blogspot.com/_syt5uOK-SGc/S6tG-UIaaZI/AAAAAAAAABQ/V_E0pJl7eNM/s1600/DSCF0287.JPG');
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,6 +63,7 @@ a.navbar-brand{
 }
 
 #yelp_camp_jumbotron h1.text-center{
+  margin-top: 100px;
   color: #fff;
   text-shadow: rgba(100, 120, 155, 0.9) 4px 2px 2px;
 }
@@ -158,11 +159,15 @@ div.caption-full{
 .add_campground .text-center{
   height: 20px;
 }
-div.alert{
+
+div.container-fluid > div.alert{
+  position: fixed;
+  z-index: 1;
   width: 95%;
-  margin: 20px auto;
+  margin: 5px auto;
   border-radius: 45px;
 }
+
 #add_comment>small>a{
   line-height:30px;
   vertical-align: top;
