@@ -8,7 +8,7 @@ router.get('/', (req,res)=>{
     if(err){
       console.log("Error", err);
     }else{
-      res.render('campgrounds/index', {campgrounds:allCampgrounds});
+      res.render('campgrounds/index', {campgrounds:allCampgrounds, pageTitle:'Campgrounds'});
     }
   })
 });
@@ -36,14 +36,14 @@ router.post('/', isLoggedIn, (req,res)=>{
 
 // NEW ROUTE
 router.get('/new', isLoggedIn, (req,res)=>{
-  res.render('campgrounds/new');
+  res.render('campgrounds/new', { pageTitle:'Add New Campground'});
 });
 
 
 // EDIT Campground Route
 router.get('/:id/edit', isLoggedIn, function(req,res){
   Campground.findById(req.params.id, (err,campground)=>{
-    res.render('campgrounds/edit', {campground});
+    res.render('campgrounds/edit', {campground:campground, pageTitle:'Edit Campground'});
   });
 });
 
@@ -65,7 +65,7 @@ router.get('/:id', function(req, res){
       console.log("Camp not found", err);
     }else{
       console.log(foundCampground);
-      res.render("campgrounds/show", {campground: foundCampground});
+      res.render("campgrounds/show", {campground: foundCampground, pageTitle: foundCampground.name});
     }
   });
 });

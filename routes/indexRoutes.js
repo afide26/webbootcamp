@@ -5,13 +5,13 @@ var User     = require('../models/user');
 var {isLoggedIn} = require('../middleware/index');
 // INDEX ROUTE
 router.get('/', function(req, res){
-  res.render('landing');
+  res.render('landing',{ pageTitle:'Home'});
 });
 // ===================
 // AUTH ROUTES
 // ===================
 router.get('/register', function(req,res){
-  res.render('register');
+  res.render('register',{ pageTitle:'Register'});
 });
 
 router.post('/register', function(req,res){
@@ -33,7 +33,7 @@ router.post('/register', function(req,res){
 // ===================
 
 router.get('/login', function(req, res){
-  res.render('login');
+  res.render('login',{ pageTitle:'Login'});
 });
 router.post('/login', passport.authenticate("local", {
   // successRedirect:"/campgrounds",
