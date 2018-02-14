@@ -14,8 +14,8 @@
   ],
   "author": "Alan Fidelino",
   "license": "MIT",
-  "engines":{
-    "node" : "7.4.0"
+  "engines": {
+    "node": "7.4.0"
   },
   "dependencies": {
     "body-parser": "^1.16.0",

@@ -77,7 +77,7 @@ a.navbar-brand{
 
 #intro{
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  color: #fefefe;.
+  color: #fefefe;
   letter-spacing: 0.5rem;
   text-align:center;
   padding: 3px;
@@ -87,6 +87,10 @@ a.navbar-brand{
 #campgrounds{
   width: 95%;
   margin: 40px auto;
+  display: flex; 
+  flex-wrap:wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .btn-warning{
   background-color:#ff8040;
